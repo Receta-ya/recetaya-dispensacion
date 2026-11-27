@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController // Endpoints REST de consulta
-@RequestMapping("/api/detalles-dispensacion")
+@RequestMapping({"/api/v1/detalles-dispensacion", "/api/detalles-dispensacion"})
 public class DetalleDispensacionController {
 
     private final DetalleDispensacionService detalleService;

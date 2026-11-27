@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController // Expone endpoints REST
-@RequestMapping("/api/dispensaciones")
+@RequestMapping({"/api/v1/dispensaciones", "/api/dispensaciones"})
 public class DispensacionController {
 
     private final DispensacionService dispensacionService;
