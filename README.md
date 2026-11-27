@@ -214,22 +214,22 @@ java -jar target\ms-dispensacion-0.0.1-SNAPSHOT.jar
 Ruta base:
 
 ```text
-http://localhost:8084/api/dispensaciones
+http://localhost:8084/api/v1/dispensaciones
 ```
 
 | Método | Endpoint | Descripción | Respuesta |
 |---|---|---|---|
-| POST | `/api/dispensaciones` | Crear dispensación | 201 |
-| GET | `/api/dispensaciones` | Listar dispensaciones | 200 |
-| GET | `/api/dispensaciones/{id}` | Buscar por ID | 200 / 404 |
-| GET | `/api/dispensaciones/receta/{idReceta}` | Buscar por receta | 200 |
-| PUT | `/api/dispensaciones/{id}` | Actualizar dispensación | 200 / 404 |
-| DELETE | `/api/dispensaciones/{id}` | Eliminar dispensación | 204 / 404 |
+| POST | `/api/v1/dispensaciones` | Crear dispensación | 201 |
+| GET | `/api/v1/dispensaciones` | Listar dispensaciones | 200 |
+| GET | `/api/v1/dispensaciones/{id}` | Buscar por ID | 200 / 404 |
+| GET | `/api/v1/dispensaciones/receta/{idReceta}` | Buscar por receta | 200 |
+| PUT | `/api/v1/dispensaciones/{id}` | Actualizar dispensación | 200 / 404 |
+| DELETE | `/api/v1/dispensaciones/{id}` | Eliminar dispensación | 204 / 404 |
 
 ## Ejemplo POST
 
 ```http
-POST /api/dispensaciones
+POST /api/v1/dispensaciones
 Content-Type: application/json
 ```
 
@@ -268,7 +268,7 @@ El sistema genera automáticamente:
 ## Ejemplo GET
 
 ```http
-GET /api/dispensaciones/1
+GET /api/v1/dispensaciones/1
 ```
 
 Si existe:
@@ -286,7 +286,7 @@ Si no existe:
 ## Ejemplo PUT
 
 ```http
-PUT /api/dispensaciones/1
+PUT /api/v1/dispensaciones/1
 Content-Type: application/json
 ```
 
@@ -313,7 +313,7 @@ Respuesta esperada:
 ## Ejemplo DELETE
 
 ```http
-DELETE /api/dispensaciones/1
+DELETE /api/v1/dispensaciones/1
 ```
 
 Respuesta exitosa:
@@ -383,3 +383,10 @@ Actualmente el microservicio permite:
 
 La integración REST con los microservicios de Recetas e Inventario forma
 parte de la integración global posterior de RecetaYa.
+
+## API REST v1
+
+Usa el prefijo `/api/v1` para clientes nuevos. Las rutas anteriores se conservan para clientes de la EP2.
+
+- `/api/v1/detalles-dispensacion`
+- `/api/v1/dispensaciones`
